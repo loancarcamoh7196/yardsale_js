@@ -1,2 +1,2 @@
-# yardsale_js
+# Yardsale JS
 App react de yardsale
