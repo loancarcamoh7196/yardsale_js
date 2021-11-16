@@ -1,10 +1,11 @@
 import React from 'react';
 import '../styles/Header.scss';
+
 const Header = () => {
     return (
         <nav>
-        <img src='./icons/icon_menu.svg' alt='menu' className='menu' />
-        <div className='navbar-left'>
+        <img src='./icons/icon_menu.svg' alt='menu' className='header__menu' />
+        <div className='header__navbar header__navbar--left'>
             <img src='./logos/logo_yard_sale.svg' alt='' />
         
             <ul>
@@ -15,13 +16,13 @@ const Header = () => {
                 <li><a href='#'>Otros</a></li>
             </ul>
         </div>
-        <div className='navbar-right'>
+        <div className='header__navbar header__navbar--right'>
             <ul>
-                <li className='navbar-email'>
+                <li className='navbar__email'>
                     <a href='#'>lolovely@something.com</a>
                 </li>
-                <li className='navbar-shopping-cart'>
-                    <img src='./icons/icon_shopping_cart.svg' alt='icon_shopping_cart' />
+                <li className='navbar__shopping-cart'>
+                    <img src='./icons/icon_shopping_cart.svg' alt='icono carrito' />
                     <div>2</div>
                 </li>
             </ul>
