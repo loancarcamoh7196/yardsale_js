@@ -1,6 +1,8 @@
 import React from 'react';
 import Form from '../containers/Form';
 
+import '@styles/CreateAccount.scss';
+
 const MyAccount = () => {
     return (
         <Form>
@@ -19,7 +21,7 @@ const MyAccount = () => {
                 </div>
 
                 <div>
-                    <input type='submit' value='Editar' className='secundaryButton form__button' />
+                    <input type='submit' value='Editar' className='secundary-button form__button' />
                 </div>
             </form>
         </Form>

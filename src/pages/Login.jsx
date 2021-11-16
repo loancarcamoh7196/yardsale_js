@@ -1,10 +1,12 @@
 import React from 'react';
-import Form from '../containers/Form';
+import Form from '@containers/Form';
+
+import formIcon from '@logos/logo_yard_sale.svg';
 
 const Login = () => {
     return (
         <Form>
-            <img src='./logos/logo_yard_sale.svg' alt='' className='form__logo' />
+            <img src={ formIcon } alt='logo tienda' className='form__logo' />
 
             <form action="/" className="form">
 
@@ -14,15 +16,15 @@ const Login = () => {
                 <label for="password" className="form__label"> Contraseña </label>
                 <input type="password" name="" id="password" placeholder="**********" className="form__input " />
 
-                <input type="submit" value="Inicia Sesión" className="primaryButton form__button" />
+                <input type="submit" value="Inicia Sesión" className="primary-button form__button" />
 
                 <a href="#">Olvide mi contraseña</a>
             </form>
 
-            <button className="secundaryButton signup__button">
+            <button className="secundary-button signup__button">
                 Registrarse
             </button>
-        </Form>
+        </Form>  
     );
 };
 

@@ -1,8 +1,10 @@
 import React from 'react';
-import '../styles/OrderDetail.scss';
+import '@styles/OrderDetail.scss';
+
+import iconFlechita from '@icons/flechita.svg';
 
 const OrderDetail = ({ flecha }) => {
-    const img_flecha = flecha ? <img src="./icons/flechita.svg" alt="" srcset="" /> : null;
+    const img_flecha = flecha ? iconFlechita : null;
     
     return (
         

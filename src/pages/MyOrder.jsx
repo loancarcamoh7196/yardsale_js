@@ -1,8 +1,8 @@
 import React from 'react';
 
-import OrderList from '../containers/OrderList';
-import OrderDetail from '../components/OrderDetail';
-import CartItem from '../components/CartItem';
+import OrderList from '@containers/OrderList';
+import OrderDetail from '@components/OrderDetail';
+import CartItem from '@components/CartItem';
 
 
 const MyOrder = () => {
