@@ -11,11 +11,6 @@ import iconFlecha from '@icons/flechita.svg';
 const MyOrder = () => {
     const {state} = useContext(AppContext);
     
-    const sumTotal = () => {
-		const reducer = (accumalator, currentValue) => accumalator + currentValue.price;
-		const sum = state.cart.reduce(reducer, 0);
-		return sum;
-	}
 
     return (
         <aside className='my-order'>

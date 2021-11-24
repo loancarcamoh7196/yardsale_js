@@ -1,3 +1,6 @@
+/**
+ * Hook de Estado Inicial del Proyecto 
+ */
 import { useState } from 'react'
 
 const initialState = {
@@ -10,7 +13,7 @@ const useInitialState = () => {
     const [state, setState] = useState(initialState);
 
     /**
-     * funcion que agrega un elemento-Producto al carro actual
+     * Funcion que agrega(setea) un elemento-Producto al carro actual
      * @param {product} payload Producto que se agregaral acarro
      */
     const addToCart = ( payload ) => {
@@ -22,11 +25,23 @@ const useInitialState = () => {
         })
     }
 
+    /**
+     * Función que elimina un elemento del carro
+     * @param {product} payload Proucto que se desea eliminar del carro actual
+     */
+    const removeFromCart = ( payload ) => {
+        setState({
+            ...state,
+            cart: state.cart.filter(item => item.id !== payload.id),
+            cantidadProducto: state.cart.length,
 
+        })
+    }
 
     return {
         state,
-        addToCart
+        addToCart,
+        removeFromCart
     }
 }
 export default useInitialState;
