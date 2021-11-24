@@ -14,25 +14,33 @@ import MyAccount from '@pages/MyAccount';
 import MyOrder from '@pages/MyOrder';
 import Orders from '../pages/Orders';
 
-const App = () => {
-    return (
-        <BrowserRouter>
-            <Layout>
+import AppContext from '../context/AppContext';
+import useInitialState from '../hooks/useInitialState';
 
-                <Routes>
-                    <Route exact path='/' element={<Home/>} />
-                    <Route exact path='/login' element={<Login/>} />
-                    <Route exact path='/recovery-password' element={<RecoveryPassword />} />
-                    <Route exact path='/send-mail' element={<SendEmail />} />
-                    <Route exact path='/sign-up' element={<CreateAccount />}/>
-                    <Route exact path='/my-account' element={<MyAccount />} />
-                    <Route exact path='/my-order' element={<MyOrder />} />
-                    <Route exact path='/orders' element={<Orders />} />
-                    
-                    <Route path='*' element={<NotFound />} />
-                </Routes>
-            </Layout>
-        </BrowserRouter>
+
+const App = () => {
+    const initialState = useInitialState();
+
+    return (
+        <AppContext.Provider value={initialState} >
+            <BrowserRouter>
+                <Layout>
+
+                    <Routes>
+                        <Route exact path='/' element={<Home/>} />
+                        <Route exact path='/login' element={<Login/>} />
+                        <Route exact path='/recovery-password' element={<RecoveryPassword />} />
+                        <Route exact path='/send-mail' element={<SendEmail />} />
+                        <Route exact path='/sign-up' element={<CreateAccount />}/>
+                        <Route exact path='/my-account' element={<MyAccount />} />
+                        <Route exact path='/my-order' element={<MyOrder />} />
+                        <Route exact path='/orders' element={<Orders />} />
+                        
+                        <Route path='*' element={<NotFound />} />
+                    </Routes>
+                </Layout>
+            </BrowserRouter>
+        </AppContext.Provider>
     );
 }
 
