@@ -29,8 +29,9 @@ const MyOrder = () => {
                 <div className='total-order__content'>
                     {state.cart.length > 0 ? 
                         <OrderDetail 
-                        total={sumTotal()} 
-                        cantidad={state.cart.length}
+                        total={state.total} 
+                        cantidad={state.cantidadProducto}
+                        fecha ={state.currentDate}
                         />
                     :
                         'Hey, agrega algun producto '

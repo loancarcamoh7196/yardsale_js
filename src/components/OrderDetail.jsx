@@ -3,14 +3,14 @@ import '@styles/OrderDetail.scss';
 
 import iconFlechita from '@icons/flechita.svg';
 
-const OrderDetail = ({ total, cantidad }) => {
+const OrderDetail = ({ total, cantidad, fecha }) => {
     
     
     return (
         
             <div className='order__detail'>
                 <p>
-                    <span>{new Date().toLocaleString() + ''}</span>
+                    <span>{ fecha }</span>
                     <span>
                     {cantidad} {cantidad == 1 ? 'artículo' : 'artículos'}
                     </span>
