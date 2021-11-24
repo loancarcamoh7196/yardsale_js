@@ -3,18 +3,20 @@ import '@styles/OrderDetail.scss';
 
 import iconFlechita from '@icons/flechita.svg';
 
-const OrderDetail = ({ flecha }) => {
-    const img_flecha = flecha ? iconFlechita : null;
+const OrderDetail = ({ total, cantidad }) => {
+    
     
     return (
         
             <div className='order__detail'>
                 <p>
-                    <span>10.11.2021</span>
-                    <span>10 articulos</span>
+                    <span>{new Date().toLocaleString() + ''}</span>
+                    <span>
+                    {cantidad} {cantidad == 1 ? 'artículo' : 'artículos'}
+                    </span>
                 </p>
-                <p>$800.00</p>
-                {img_flecha}
+                <p>$ {total}</p>
+                
             </div>
         
     );
